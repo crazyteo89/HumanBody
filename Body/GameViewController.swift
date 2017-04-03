@@ -11,12 +11,15 @@ import QuartzCore
 import SceneKit
 
 class GameViewController: UIViewController {
+    var ship: SCNNode!
+    var firstAction = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/Human_Heart.scn")!
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -24,7 +27,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
         
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 30)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -41,10 +44,13 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         // retrieve the ship node
-        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        ship = scene.rootNode.childNode(withName: "Human_Heart", recursively: true)!
         
         // animate the 3d object
+        if firstAction == false{
         ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        }
+        
         
         // retrieve the SCNView
         let scnView = self.view as! SCNView
@@ -59,7 +65,7 @@ class GameViewController: UIViewController {
         scnView.showsStatistics = true
         
         // configure the view
-        scnView.backgroundColor = UIColor.black
+        scnView.backgroundColor = UIColor.white
         
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(GameViewController.handleTap(_:)))
@@ -69,10 +75,12 @@ class GameViewController: UIViewController {
             gestureRecognizers.append(contentsOf: existingGestureRecognizers)
         }
         scnView.gestureRecognizers = gestureRecognizers
+        firstAction = true
     }
     
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
+        ship.removeAllActions()
         let scnView = self.view as! SCNView
         
         // check what nodes are tapped

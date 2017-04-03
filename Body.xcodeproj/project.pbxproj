@@ -12,6 +12,8 @@
 		FFA15FB51E924A73008921F9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA15FB41E924A73008921F9 /* GameViewController.swift */; };
 		FFA15FB81E924A73008921F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA15FB61E924A73008921F9 /* Main.storyboard */; };
 		FFA15FBA1E924A73008921F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA15FB91E924A73008921F9 /* Assets.xcassets */; };
+		FFA15FC21E9269C6008921F9 /* CollectionControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA15FC11E9269C6008921F9 /* CollectionControllerViewController.swift */; };
+		FFA15FC41E926CD0008921F9 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA15FC31E926CD0008921F9 /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FFA15FB71E924A73008921F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFA15FB91E924A73008921F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA15FBB1E924A73008921F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA15FC11E9269C6008921F9 /* CollectionControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionControllerViewController.swift; sourceTree = "<group>"; };
+		FFA15FC31E926CD0008921F9 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				FFA15FB21E924A73008921F9 /* art.scnassets */,
 				FFA15FB41E924A73008921F9 /* GameViewController.swift */,
 				FFA15FB61E924A73008921F9 /* Main.storyboard */,
+				FFA15FC11E9269C6008921F9 /* CollectionControllerViewController.swift */,
+				FFA15FC31E926CD0008921F9 /* BookViewController.swift */,
 				FFA15FB91E924A73008921F9 /* Assets.xcassets */,
 				FFA15FBB1E924A73008921F9 /* Info.plist */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA15FB51E924A73008921F9 /* GameViewController.swift in Sources */,
+				FFA15FC41E926CD0008921F9 /* BookViewController.swift in Sources */,
 				FFA15FB11E924A73008921F9 /* AppDelegate.swift in Sources */,
+				FFA15FC21E9269C6008921F9 /* CollectionControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +302,7 @@
 				FFA15FC01E924A73008921F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
