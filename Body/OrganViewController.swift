@@ -12,9 +12,10 @@ import SceneKit
 
 class OrganViewController: UIViewController {
     var Heart: SCNNode!
+    var nameModel: String!
+    var nameScene = "art.scnassets/"    
     
     @IBOutlet weak var sceneViewHeart: SCNView!
-    var firstAction = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
