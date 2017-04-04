@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF9733261E93B73900C095E9 /* OrganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9733251E93B73900C095E9 /* OrganViewController.swift */; };
 		FFA15FB11E924A73008921F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA15FB01E924A73008921F9 /* AppDelegate.swift */; };
 		FFA15FB31E924A73008921F9 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA15FB21E924A73008921F9 /* art.scnassets */; };
 		FFA15FB81E924A73008921F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA15FB61E924A73008921F9 /* Main.storyboard */; };
 		FFA15FBA1E924A73008921F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA15FB91E924A73008921F9 /* Assets.xcassets */; };
-		FFA9F21C1E93B5E6003F4DF0 /* OrganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA9F21B1E93B5E6003F4DF0 /* OrganViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF9733251E93B73900C095E9 /* OrganViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganViewController.swift; sourceTree = "<group>"; };
 		FFA15FAD1E924A73008921F9 /* Body.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Body.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA15FB01E924A73008921F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA15FB21E924A73008921F9 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FFA15FB71E924A73008921F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFA15FB91E924A73008921F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA15FBB1E924A73008921F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFA9F21B1E93B5E6003F4DF0 /* OrganViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganViewController.swift; path = ../../BodyDario/Body/OrganViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 		FFA15FAF1E924A73008921F9 /* Body */ = {
 			isa = PBXGroup;
 			children = (
-				FFA9F21B1E93B5E6003F4DF0 /* OrganViewController.swift */,
+				FF9733251E93B73900C095E9 /* OrganViewController.swift */,
 				FFA15FB01E924A73008921F9 /* AppDelegate.swift */,
 				FFA15FB21E924A73008921F9 /* art.scnassets */,
 				FFA15FB61E924A73008921F9 /* Main.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA9F21C1E93B5E6003F4DF0 /* OrganViewController.swift in Sources */,
+				FF9733261E93B73900C095E9 /* OrganViewController.swift in Sources */,
 				FFA15FB11E924A73008921F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
