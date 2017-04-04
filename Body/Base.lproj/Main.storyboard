@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zrh-Y1-QME">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="39d-1W-lBW">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Organ View Controller-->
         <scene sceneID="dD3-Li-jYr">
             <objects>
-                <viewController id="Zrh-Y1-QME" customClass="OrganViewController" customModule="Body" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OVC" id="Zrh-Y1-QME" customClass="OrganViewController" customModule="Body" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rVQ-BA-4kO"/>
                         <viewControllerLayoutGuide type="bottom" id="BXi-XN-Zmv"/>
@@ -74,11 +73,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-NE-DuF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-NE-DuF">
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="AZx-NE-DuF" secondAttribute="height" multiplier="7:8" id="vFU-GU-k5l"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>

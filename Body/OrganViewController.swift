@@ -13,16 +13,20 @@ import SceneKit
 class OrganViewController: UIViewController {
     var Heart: SCNNode!
     var nameModel: String!
-    var nameScene = "art.scnassets/"    
     
     @IBOutlet weak var sceneViewHeart: SCNView!
+    
+    func loadModel(nameModel: String) {
+        self.nameModel = nameModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/Human_Heart.scn")!
+        let pathScene = "art.scnassets/" + nameModel + ".scn"
+        let scene = SCNScene(named: pathScene)!
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -40,7 +44,7 @@ class OrganViewController: UIViewController {
         scene.rootNode.addChildNode(lightNode)
         
         // retrieve the ship node
-        Heart = scene.rootNode.childNode(withName: "Human_Heart", recursively: true)!
+        Heart = scene.rootNode.childNode(withName: nameModel, recursively: true)!
         
         // animate the 3d object
         Heart.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))

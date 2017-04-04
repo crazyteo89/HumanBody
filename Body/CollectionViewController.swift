@@ -44,7 +44,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let mySceneToShow = storyboard?.instantiateViewController(withIdentifier: "OVC") as! OrganViewController
+        mySceneToShow.loadModel(nameModel: "Human_Heart")
+        self.present(mySceneToShow, animated: true, completion: nil)
     }
 
 }
