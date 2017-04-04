@@ -38,20 +38,11 @@ class OrganViewController: UIViewController {
         lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
         scene.rootNode.addChildNode(lightNode)
         
-        // create and add an ambient light to the scene
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = .ambient
-        ambientLightNode.light!.color = UIColor.darkGray
-        scene.rootNode.addChildNode(ambientLightNode)
-        
         // retrieve the ship node
         Heart = scene.rootNode.childNode(withName: "Human_Heart", recursively: true)!
         
         // animate the 3d object
-        if firstAction == false{
-            Heart.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-        }
+        Heart.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
         
         sceneViewHeart.scene = scene
@@ -73,9 +64,11 @@ class OrganViewController: UIViewController {
             gestureRecognizers.append(contentsOf: existingGestureRecognizers)
         }
         self.view.gestureRecognizers = gestureRecognizers
-        
-        firstAction = true
     }
+    
+    /*override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        Heart.removeAllActions()
+    }*/
     
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
