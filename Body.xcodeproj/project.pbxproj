@@ -60,13 +60,13 @@
 		FFA15FAF1E924A73008921F9 /* Body */ = {
 			isa = PBXGroup;
 			children = (
-				FF9733251E93B73900C095E9 /* OrganViewController.swift */,
 				FFA15FB01E924A73008921F9 /* AppDelegate.swift */,
 				FFA15FB21E924A73008921F9 /* art.scnassets */,
 				FFA15FB61E924A73008921F9 /* Main.storyboard */,
 				FFA15FB91E924A73008921F9 /* Assets.xcassets */,
 				FFA15FBB1E924A73008921F9 /* Info.plist */,
 				CF4DAC391E93F6A800AD68CD /* TableViewController.swift */,
+				FF9733251E93B73900C095E9 /* OrganViewController.swift */,
 				CF4DAC3B1E93F78F00AD68CD /* CollectionViewCell.swift */,
 				CF4DAC3F1E93F7B400AD68CD /* CollectionViewController.swift */,
 			);

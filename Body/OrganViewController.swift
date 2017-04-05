@@ -11,7 +11,7 @@ import QuartzCore
 import SceneKit
 
 class OrganViewController: UIViewController {
-    var Heart: SCNNode!
+    var organ: SCNNode!
     var nameModel: String!
     var stringDescription: String!
     
@@ -51,10 +51,10 @@ class OrganViewController: UIViewController {
         scene.rootNode.addChildNode(lightNode)
         
         // retrieve the heart node
-        Heart = scene.rootNode.childNode(withName: nameModel, recursively: true)!
+        organ = scene.rootNode.childNode(withName: nameModel, recursively: true)!
         
         // animate the 3d object
-        Heart.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        organ.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
         self.descrizione.text = stringDescription
         
@@ -85,7 +85,7 @@ class OrganViewController: UIViewController {
     
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
-        Heart.removeAllActions()
+        organ.removeAllActions()
         let scnView = sceneViewHeart
         
         // check what nodes are tapped
