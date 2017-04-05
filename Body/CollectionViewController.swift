@@ -13,6 +13,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var myCollection: UICollectionView!
     
     let allNameModels = ["Human_Heart","Brain_Model","eyeball"]
+    let allImageModels = ["heart","brain","eye"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CollectionViewCell
-        cell.imageForChoice.image = UIImage(named: "Heart")
+        cell.imageForChoice.image = UIImage(named: allImageModels[indexPath.row])
         return cell
     }
     
