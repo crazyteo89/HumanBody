@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     
     @IBOutlet var miaTabella: UITableView!
     
-    let categorie = ["Medicina","Ingegneria","Metalmeccanica"]
+    let categorie = ["Medicine","Engineering","Devices"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
