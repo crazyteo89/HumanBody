@@ -25,17 +25,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </sceneKitView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl0-qR-laG">
-                                <rect key="frame" x="1353" y="8" width="547" height="684"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl0-qR-laG">
+                                <rect key="frame" x="1320" y="8" width="580" height="1064"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">The heart is a muscular organ in humans and other animals, which pumps blood through the blood vessels of the circulatory system.[1] Blood provides the body with oxygen and nutrients, as well as assists in the removal of metabolic wastes.[2] In humans, the heart is located between the lungs, in the middle compartment of the chest.[3]</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="descrizione" destination="Rl0-qR-laG" id="buW-TN-vRe"/>
                         <outlet property="sceneViewHeart" destination="dKb-RF-qG8" id="MKO-Yo-3lI"/>
                     </connections>
                 </viewController>
@@ -58,7 +58,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QMF-AC-b39">
                                 <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5dE-CK-zDr">
                                     <size key="itemSize" width="350" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -73,9 +73,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-NE-DuF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-NE-DuF">
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
                                         </view>

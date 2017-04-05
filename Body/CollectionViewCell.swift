@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        self.commonInit()
+        //self.commonInit()
     }
     
     required init?(coder aDecoder: NSCoder)
@@ -26,7 +26,6 @@ class CollectionViewCell: UICollectionViewCell {
     fileprivate func commonInit()
     {
         // Initialization code
-        
         self.layoutIfNeeded()
         self.layoutSubviews()
         self.setNeedsDisplay()
