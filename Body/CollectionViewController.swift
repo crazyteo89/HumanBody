@@ -12,6 +12,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
 
     @IBOutlet weak var myCollection: UICollectionView!
     
+    let allNameModels = ["Human_Heart","Brain_Model","eyeball"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,7 +36,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return allNameModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,7 +47,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mySceneToShow = storyboard?.instantiateViewController(withIdentifier: "OVC") as! OrganViewController
-        mySceneToShow.loadModel(nameModel: "Human_Heart")
+        mySceneToShow.loadModel(nameModel: allNameModels[indexPath.row])
         self.present(mySceneToShow, animated: true, completion: nil)
     }
 
