@@ -16,6 +16,7 @@ class CollectionViewCell: UICollectionViewCell {
     var imagefocussed: UIImage!
     var blurEffectView = UIVisualEffectView()
     
+    @IBOutlet weak var imageOpaque: UIImageView!
     
     
     override init(frame: CGRect)
@@ -52,6 +53,9 @@ class CollectionViewCell: UICollectionViewCell {
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         if self.isFocused {
             imageForChoice.adjustsImageWhenAncestorFocused = true
+            imageForChoice.isHidden = true
+            imageOpaque.isHidden = false
+            
             //addBlurEffect()
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                 self.labelOrgan.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
@@ -60,6 +64,8 @@ class CollectionViewCell: UICollectionViewCell {
         } else {
             //blurEffectView.removeFromSuperview()
             imageForChoice.adjustsImageWhenAncestorFocused = false
+            imageForChoice.isHidden = false
+            imageOpaque.isHidden = true
             //labelOrgan.font = labelOrgan.font.withSize(40)
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                 self.labelOrgan.transform = CGAffineTransform(scaleX: 1, y: 1)
