@@ -11,6 +11,10 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageForChoice: UIImageView!
+    @IBOutlet weak var labelOrgan: UILabel!
+    var blurEffectView = UIVisualEffectView()
+    
+    
     
     override init(frame: CGRect)
     {
@@ -23,6 +27,8 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
+    
+    
     fileprivate func commonInit()
     {
         // Initialization code
@@ -31,11 +37,32 @@ class CollectionViewCell: UICollectionViewCell {
         self.setNeedsDisplay()
     }
     
+    func addBlurEffect()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.addSubview(blurEffectView)
+    }
+    
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         if self.isFocused {
             imageForChoice.adjustsImageWhenAncestorFocused = true
+            //addBlurEffect()
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.labelOrgan.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            })
+            
         } else {
+            //blurEffectView.removeFromSuperview()
             imageForChoice.adjustsImageWhenAncestorFocused = false
+            //labelOrgan.font = labelOrgan.font.withSize(40)
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.labelOrgan.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+            
         }
     }
 }
