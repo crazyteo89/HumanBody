@@ -12,6 +12,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageForChoice: UIImageView!
     @IBOutlet weak var labelOrgan: UILabel!
+    var imagenotfocussed: UIImage!
+    var imagefocussed: UIImage!
     var blurEffectView = UIVisualEffectView()
     
     
